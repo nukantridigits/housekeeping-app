@@ -1,0 +1,106 @@
+@import "app/my-custom-semantic-theme/variables";
+
+.Dark {
+  .mobile-room{
+    &-description, &-amenities, &-to-do-list, &-comments {
+      background: @InputBackgroundColorDark;
+    }
+
+    .ui.checkbox label, .mobile-room-comments__title {
+      color: @TextColorDark;
+    }
+  }
+}
+
+.mobile-room {
+  height: 100%;
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+  }
+
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .ui.checkbox label, .mobile-room-comments__title{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  &-description, &-amenities, &-to-do-list, &-comments {
+    display: flex;
+    background: @SecondaryColor;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px 10px 10px 16px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  &__accordion-wrapper{
+    padding: 0 20px 0 16px;
+  }
+
+  &-description {
+    .avatar-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: @SecondaryColor;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    &__info {
+      &-text {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 5px 0;
+        padding: 0;
+        color: @TextColorLight;
+      }
+
+      &-subtext {
+        color: @TextColorLight;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  &-comments {
+    display: flex;
+    flex-direction: column;
+
+    &.ui {
+      &.form {
+        p {
+          margin: 6px 0 12px;
+        }
+      }
+    }
+  }
+}
+
+
+.mobile-room-amenities__info-icon,
+.mobile-room-to-do-list__info-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: @TableHeaderTextColorLight;
+}
+
+.mobile-room-amenities .ui.checkbox,
+.mobile-room-to-do-list .ui.checkbox {
+  margin: 6px 0 5px;
+}
+
+.mobile-room-amenities .ui.checkbox input.hidden + label,
+.mobile-room-to-do-list .ui.checkbox input.hidden + label,
+.mobile-room-comments__title {
+  line-height: 18px;
+}

@@ -1,0 +1,584 @@
+@TextColorLight: #313131;
+@TextColorDark: #F6F9FF;
+@BackGroundColorLight: #F5F6FA;
+@BackGroundColorDark: #1C1E22;
+@BorderColorDark: #4B4E54;
+@InputTextColorLight: #CACACD;
+@InputBackgroundColorLight: #ffffff;
+@InputBackgroundColorDark: #26282e;
+@InputTextColorDark: #CACACD;
+@BorderColorLight: #D4D4D4;
+@PrimaryColor: #3184FF;
+@SecondaryColor: #FFFFFF;
+@AvatarBackgroundColor: #C4C4C4;
+
+// Table Colors
+@TableHeaderTextColorLight: #b5b5b7;
+@TableHeaderTextColorDark: #888F96;
+@TableBorderColorLight: #ededed;
+@TableBorderColorDark: #36383f;
+
+// Badge Colors
+@BlueBadgeColorLight: #3184FF;
+@BlueBadgeBackgroundColorLight: #E6F0FF;
+@BlueBadheBackgourndColorDarkActive: rgba(49, 132, 255, 0.2);
+
+@GreenBadgeColorLight: #55CE63;
+@GreenBadgeBackgroundColorLight: rgba(85, 206, 99, 0.15);
+
+@OrangeBadgeColorLight: #FF9800;
+@OrangeBadgeBackgroundColorLight: rgba(255, 152, 0, 0.15);
+
+@RedBadgeColorLight: #FF3636;
+@RedBadgeBackgroundColorLight: rgba(255, 54, 54, 0.12);
+
+@BlackBadgeColorLight: @TextColorLight;
+@BlackBadgeBackgroundColorLight: rgba(49,49,49,0.12);
+
+
+@BlackBadgeColorDark: @TextColorDark;
+@BlackBadgeBackgroundColorDark: rgba(246,249,255,0.12);
+
+
+//Pagination
+@PaginationBackgroundActiveColor: rgba(49, 132, 255, 0.12);
+
+//Grid normalize
+.ui.grid {
+  margin: 0 !important;
+}
+//Adaptive
+@mob: ~"(max-width:767px)";
+
+// BUTTONS GLOBAL
+.ui.button {
+    width: 100%;
+}
+
+.ui.button.large {
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 17px;
+  font-weight: 600;
+}
+
+.ui.input.mini.fluid {
+    height: 40px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+
+@media @mob{
+  .ui.button{
+    width: 100%;
+  }
+}
+
+// LIGHT MODE
+.Light {
+    color: @TextColorLight;
+    background: @BackGroundColorLight;
+
+  .custom-divider {
+    width: 100%;
+    height: 1px;
+    background: @TableBorderColorLight;
+  }
+
+  // REPORTS TABLE
+  .report-table {
+    background-color: @InputBackgroundColorLight;
+    color: @TextColorLight;
+  }
+  .report-table-header-row {
+    border-top: 1px solid @TableBorderColorLight;
+  }
+  .report-table-body {
+    &__row {
+      border-top: 1px solid @TableBorderColorLight;
+      &:last-child {
+        border-bottom: 1px solid @TableBorderColorLight;
+      }
+    }
+  }
+  .report-table-cell {
+    border-left: 0.5px solid @TableBorderColorLight;
+    &:first-child {
+        border-left: none;
+    }
+  }
+
+
+
+  // BUTTONS
+  .ui.button.primary {
+      background: @PrimaryColor;
+      border: 1px solid @PrimaryColor;
+  }
+  .ui.button.secondary {
+      background: @SecondaryColor;
+      color: @TextColorLight;
+      border: 1px solid @BorderColorLight;
+  }
+
+  // BUTTONS
+  .ui.button.primary {
+      background: @PrimaryColor;
+      border: 1px solid @PrimaryColor;
+  }
+  .ui.button.secondary {
+      background: @SecondaryColor;
+      color: @TextColorLight;
+      border: 1px solid @BorderColorLight;
+    }
+
+    .add-todo-buttons {
+      &__button {
+        border: 1px solid @BorderColorLight;
+        background-color: @BackGroundColorLight;
+        color: @BorderColorLight;
+      }
+    }
+
+
+
+  .ui.table {
+      thead {
+          tr {
+              border-bottom: 1px solid @TableBorderColorDark;
+              th {
+                  background: @SecondaryColor;
+                  color: @TableHeaderTextColorLight;
+              }
+          }
+      }
+
+  }
+
+  //BookList
+  .list-content__item {
+    background: @SecondaryColor;
+  }
+
+  //Header nav
+  .nav-item__link,
+  .header__controls-icon {
+    color: @TableHeaderTextColorLight;
+  }
+
+  .header {
+      background: @SecondaryColor;
+  }
+    background: @BackGroundColorLight;
+
+    // BUTTONS
+    .ui.button.primary {
+        background: @PrimaryColor;
+        border: 1px solid @PrimaryColor;
+    }
+    .ui.button.secondary {
+        background: @SecondaryColor;
+        color: @TextColorLight;
+        border: 1px solid @BorderColorLight;
+    }
+    .actions-button {
+        background: rgba(63, 49, 132, 0.12);
+    }
+
+    // INPUTS
+    .ui.input,.ui.input.mini{
+      // border: 1px solid @BorderColorLight;
+      border-radius: 6px;
+      input {
+        ::placeholder {
+          color: @InputTextColorLight;
+        }
+        background: @InputBackgroundColorLight;
+      }
+    }
+
+    .dropdown-label__text,.dropdown-label__button {
+      background: @BlueBadgeBackgroundColorLight;
+      color: @BlueBadgeColorLight;
+    }
+
+    .ui.table {
+        thead {
+            tr {
+                border-bottom: 1px solid @TableBorderColorDark;
+                th {
+                    background: @SecondaryColor;
+                    color: @TableHeaderTextColorLight;
+                }
+            }
+        }
+
+    }
+
+    .ui.medium.modal {
+      .add-todo-list {
+        border: 1px solid @BorderColorLight;
+      }
+    }
+
+    .card {
+      background-color: @InputBackgroundColorLight;
+    }
+}
+
+// DARK MODE
+.Dark {
+  color: @TextColorDark;
+  background: @BackGroundColorDark;
+
+  .custom-divider {
+    width: 100%;
+    height: 1px;
+    background: @TableBorderColorDark;
+  }
+
+   // REPORTS TABLE
+  .report-table {
+      background-color: @InputBackgroundColorDark;
+      color: @TextColorDark;
+  }
+  .report-table-header-row {
+    border-top: 1px solid @TableBorderColorDark;
+  }
+  .report-table-body {
+    &__row {
+      border-top: 1px solid @TableBorderColorDark;
+      &:last-child {
+        border-bottom: 1px solid @TableBorderColorDark;
+      }
+    }
+  }
+  .report-table-cell {
+    border-left: 1px solid @TableBorderColorDark;
+    &:first-child {
+        border-left: none;
+    }
+  }
+
+  // BUTTONS
+  .ui {
+    &.button {
+      &.primary {
+        border: 1px solid @PrimaryColor;
+        background: @PrimaryColor;
+      }
+      &.secondary {
+        color: @TextColorDark;
+        background-color: @BackGroundColorDark;
+        border: 1px solid @BorderColorDark;
+      }
+    }
+  }
+
+  // INPUTS
+  .ui.input,.ui.input.mini {
+        border: 1px solid @BorderColorDark;
+        border-radius: 6px;
+        input {
+            color: @InputTextColorDark;
+            background: @InputBackgroundColorDark;
+        }
+    }
+
+
+  .dropdown-label__text,.dropdown-label__button {
+    background: @BlueBadheBackgourndColorDarkActive;
+    color: @BlueBadgeColorLight;
+  }
+
+  .ui.icon.input {
+    border: 1px solid @BorderColorDark;
+    border-radius: 6px;
+  }
+
+  .ui.selection.dropdown {
+    display: flex;
+    flex-direction: column-reverse;
+    color: @InputTextColorDark;
+    background: @InputBackgroundColorDark;
+    border: 1px solid @BorderColorDark;
+    border-radius: 6px;
+    height: 40.33px;
+  }
+  .visible.menu.transition {
+    outline: none;
+    color: @InputTextColorDark;
+    background: @InputBackgroundColorDark;
+    .item {
+      color: @InputTextColorDark;
+      border: none;
+    }
+  }
+  .placeholder-component { // TODO: bug need fixes, eto KocTbIJlb
+    padding-bottom: 8px;
+  }
+
+  .ui.table {
+      background: @InputBackgroundColorDark;
+      color: @TextColorDark;
+      thead {
+          tr {
+              th {
+                  background: @InputBackgroundColorDark;
+                  color: @TableHeaderTextColorDark;
+                  border-bottom: 1px solid @TableBorderColorDark;
+              }
+          }
+      }
+      tbody {
+          tr {
+              td {
+                  border-bottom: 1px solid @TableBorderColorDark;
+              }
+          }
+      }
+  }
+
+  // MODALS
+  .ui.mini.modal {
+    .header {
+      background: @InputBackgroundColorDark;
+      color: @TextColorDark;
+    }
+    .content {
+      background: @InputBackgroundColorDark;
+      color: @TextColorDark;
+    }
+  }
+  .ui.medium.modal {
+    .header {
+      background: @InputBackgroundColorDark;
+      color: @TextColorDark;
+    }
+    .content {
+      background: @InputBackgroundColorDark;
+      color: @TextColorDark;
+    }
+    .add-todo-list {
+      border: 1px solid @BorderColorDark;
+    }
+  }
+
+  //badges
+  .badge-blue-active {
+      background:@BlueBadheBackgourndColorDarkActive;
+      border: 1px solid @BlueBadheBackgourndColorDarkActive;
+  }
+
+  //pagination
+  .ui.pagination.menu {
+      .item {
+          color: @TextColorDark;
+      }
+  }
+
+  //BookList
+  .list-content__item {
+    background: @InputBackgroundColorDark;
+  }
+
+  //Header nav
+  .nav-item__link,
+  .header__controls-icon {
+    color: @TableHeaderTextColorDark;
+  }
+  .header {
+    background: @InputBackgroundColorDark;
+}
+    background: @BackGroundColorDark;
+
+    // BUTTONS
+    .ui.button.primary {
+        border: 1px solid @PrimaryColor;
+        background: @PrimaryColor;
+    }
+    .ui.button.secondary {
+        color: @TextColorDark;
+        background-color: transparent;
+        border: 1px solid @BorderColorDark;
+    }
+
+    .actions-button {
+        background: @BlueBadheBackgourndColorDarkActive;
+    }
+
+    .add-todo-buttons {
+      &__button {
+        border: 1px solid @BorderColorDark;
+        background-color: @BackGroundColorDark;
+        color: @TextColorDark;
+      }
+    }
+
+
+    .ui.table {
+        background: @InputBackgroundColorDark;
+        color: @TextColorDark;
+        thead {
+            tr {
+                th {
+                    background: @InputBackgroundColorDark;
+                    color: @TableHeaderTextColorDark;
+                    border-bottom: 1px solid @TableBorderColorDark;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    border-bottom: 1px solid @TableBorderColorDark;
+                }
+            }
+        }
+    }
+
+    //badges
+    .badge-blue-active {
+        background:@BlueBadheBackgourndColorDarkActive;
+        border: 1px solid @BlueBadheBackgourndColorDarkActive;
+
+    }
+
+    //signs
+    .sign-blue {
+      background: @BlueBadheBackgourndColorDarkActive;
+    }
+
+    .sign-black {
+      color: @BlackBadgeColorDark;
+      background: @BlackBadgeBackgroundColorDark;
+  }
+    //pagination
+    .ui.pagination.menu {
+        .item {
+            color: @TextColorDark;
+        }
+    }
+
+  .card {
+    background-color: @InputBackgroundColorDark;
+  }
+  // checkbox
+  .ui.checkbox {
+    input:focus ~ .box:before,
+    input:focus ~ label:before {
+      border-color: @BorderColorDark!important;
+    }
+    .box:before, label:before {
+      border-color: @BorderColorDark;
+    }
+    label {
+      color: @TextColorDark;
+      &:before {
+        background: transparent!important;
+      }
+    }
+  }
+}
+
+//Forms
+@media @mob {
+  .input_row {
+    position: relative;
+      margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+    .ui.input {
+      width: 100%;
+      border: 0;
+      input{
+        border-radius: 6px;
+      }
+    }
+    .validation_error {
+      position: absolute;
+      display: block;
+      font-size: 12px;
+      color: @RedBadgeColorLight;
+    }
+  }
+}
+
+//checkbox
+.ui.checkbox {
+  &.checked {
+    label {
+      &:before{
+        background: @PrimaryColor!important;
+      }
+    }
+    .box:before, label:before {
+      border-color: @PrimaryColor!important;
+      background-color: @PrimaryColor;
+    }
+
+    input:checked ~ .box:after,
+    input:checked ~ label:after{
+      color: @InputBackgroundColorLight;
+    }
+  }
+
+  input:focus ~ .box:before,
+  input:focus ~ label:before {
+    border-color: @BorderColorLight!important;
+  }
+
+  label {
+    &:before{
+      &:focus{
+        outline: none;
+      }
+    }
+    &:before, &:after{
+      width: 16px;
+      height: 16px;
+      top: -1px;
+      box-sizing: content-box;
+    }
+  }
+}
+
+.layout{
+  .ui.checkbox {
+    &.label-left {
+      width: 100%;
+      label {
+        width: 100%;
+        font-weight: 400;
+        padding-left: 0;
+        font-size: 15px;
+        &:before,&:after {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+//Layout
+@media @mob{
+  #app {
+    .wrapper {
+      min-height: 100vh;
+      .content {
+        width: 89.33%;
+      }
+    }
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}

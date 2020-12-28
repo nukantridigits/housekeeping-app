@@ -1,0 +1,40 @@
+@import 'app/my-custom-semantic-theme/variables';
+
+.Dark {
+  .layout {
+    .room-to-do-list-view {
+      .add-list {
+        &__item {
+          &__icon {
+            &.selected {
+              color: @PrimaryColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.layout {
+  .room-to-do-list-view {
+    .add-list {
+      &__item {
+        &__icon {
+          transition: color .2s;
+          &.selected {
+            color: @PrimaryColor;
+          }
+
+          &:first-of-type {
+            margin-right: 16px;
+          }
+        }
+
+        &__icons {
+          display: flex;
+        }
+      }
+    }
+  }
+}

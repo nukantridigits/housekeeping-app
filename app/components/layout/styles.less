@@ -1,0 +1,27 @@
+@import 'app/my-custom-semantic-theme/variables.less';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  flex-wrap: nowrap;
+  &__header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  &__content {
+    margin-top: 65px;
+    overflow: auto;
+    padding: 8px 16px;
+    height: calc(100vh - 65px);
+  }
+  &__footer {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+}
+

@@ -1,0 +1,38 @@
+@import 'app/my-custom-semantic-theme/variables.less';
+
+.Dark {
+  .header-wrapper {
+    .ui.vertical.menu {
+      background: @InputBackgroundColorDark;
+      .item {
+        color: @TextColorDark;
+        &__item-icon {
+          color: @TextColorDark;
+        }
+      }
+    }
+  }
+}
+
+.header-wrapper {
+  .ui.vertical.menu {
+    width: 135px;
+    right: 19px;
+    top: 50px;
+    margin: 0;
+    position: absolute;
+
+    .item {
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.header-menu {
+  &__item-icon {
+    margin-right: 10px;
+  }
+}

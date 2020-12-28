@@ -1,0 +1,23 @@
+@import "app/my-custom-semantic-theme/variables";
+
+.Dark {
+  .mobile-tabs {
+    background-color: @InputBackgroundColorDark;
+  }
+}
+
+.mobile-tabs {
+  display: flex;
+  width: 100%;
+  background-color: @SecondaryColor;
+  height: 50px;
+
+  &__item {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    margin: auto;
+    outline: none;
+    padding-left: 20%;
+  }
+}

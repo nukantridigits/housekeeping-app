@@ -1,0 +1,26 @@
+@import 'app/my-custom-semantic-theme/variables';
+.mobile-room-description {
+  &__info {
+    &-text {
+      color: @TextColorLight;
+    }
+
+    &-subtext {
+      color: @TableHeaderTextColorLight;
+    }
+  }
+}
+
+.Dark {
+  .mobile-room-description {
+    &__info {
+      &-text {
+        color: @TextColorDark;
+      }
+
+      &-subtext {
+        color: @TextColorDark;
+      }
+    }
+  }
+}

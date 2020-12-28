@@ -1,0 +1,5 @@
+/*
+ *
+ * AmenitiesPage constants
+ *
+ */

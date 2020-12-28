@@ -1,0 +1,32 @@
+@import '../../variables.less';
+.ui.pagination.menu {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    .item {
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        background: none;
+    }
+    .item:before {
+        content: none;
+    }
+    .item.active {
+        background: @PaginationBackgroundActiveColor;
+    }
+    .item:hover {
+        background: @PaginationBackgroundActiveColor;
+    }
+
+    .item:last-child {
+        border-radius: 50%;
+    }
+}
+
+.rooms-pagination-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+

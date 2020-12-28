@@ -1,0 +1,48 @@
+@import "app/my-custom-semantic-theme/variables";
+
+
+.set-amenities {
+  border-radius: 6px;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    padding: 16px;
+    height: 52px;
+    background: transparent;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    &-border {
+      margin-top: 15px;
+    }
+  }
+  &__content {
+    padding: 16px;
+    overflow: auto;
+  }
+}
+
+.Light {
+  .set-amenities {
+    background-color: @InputBackgroundColorLight;
+    &__title {
+      &-border {
+        border-bottom: 1px solid @TableBorderColorLight;
+      }
+    }
+  }
+}
+
+.Dark {
+  .set-amenities {
+    background-color: @InputBackgroundColorDark;
+    &__title {
+      &-border {
+        border-bottom: 1px solid @TableBorderColorDark;
+      }
+    }
+  }
+}
+

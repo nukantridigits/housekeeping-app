@@ -1,0 +1,35 @@
+@import "app/my-custom-semantic-theme/variables";
+
+
+.add-list {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 400;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__name {
+      width: 60%;
+      font-size: 17px;
+      line-height: 20px;
+    }
+    &__counter {
+      width: 35%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__number {
+        vertical-align: bottom;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+}

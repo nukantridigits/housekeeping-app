@@ -1,0 +1,31 @@
+@import 'app/my-custom-semantic-theme/variables';
+
+.ui {
+  &.form {
+    textarea {
+      resize: none!important;
+      height: 120px;
+      color: @TextColorLight;
+      background-color: @BackGroundColorLight;
+      padding-left: 12px;
+      &::placeholder, &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder {
+        color: @TableHeaderTextColorLight;
+      }
+    }
+  }
+}
+
+.Dark{
+  .ui {
+    &.form {
+      textarea {
+        color: @TextColorDark;
+        background-color: @BackGroundColorDark;
+
+        &::placeholder, &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder {
+          color: @TableHeaderTextColorDark;
+        }
+      }
+    }
+  }
+}

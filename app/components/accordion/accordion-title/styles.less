@@ -1,0 +1,62 @@
+@import "app/my-custom-semantic-theme/variables";
+
+.Dark {
+  .mobile-accordion {
+    .accordion {
+      &.ui {
+        svg {
+          color: @TableHeaderTextColorDark;
+        }
+
+        .title {
+          &.active {
+            border-bottom: 1px solid @TableBorderColorDark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-accordion {
+  width: 100%;
+
+  &__chevron-icon {
+    margin-right: -5px;
+  }
+
+  .accordion {
+    &.ui {
+      svg {
+        color: @TableHeaderTextColorLight;
+      }
+
+      .title {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 0;
+
+        .accordion_trigger {
+          transition: transform .2s;
+        }
+
+        &.active {
+          border-bottom: 1px solid @TableBorderColorLight;
+
+          .accordion_trigger {
+            transform: rotate(-180deg);
+          }
+        }
+
+        .checkbox {
+          margin: 0;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
